@@ -1,0 +1,14 @@
+@media  screen and (max-width: 820px) {
+    
+}
+
+/* Tamanho padrão para smartphones */
+@media screen and (max-width: 480px) {
+    #img-login {
+        display: none;
+    }
+    .img-logo {
+        width: 4rem;
+        height: 4rem;
+    }
+}

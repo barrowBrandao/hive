@@ -1,0 +1,46 @@
+*{
+    font-family: 'ROBOTO', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+body {
+    background-color: white;
+}
+div {
+    display:list-item;
+    list-style: none;
+}
+.img-logo{
+    width: 4rem;
+    height: 4rem;
+}
+#login img{
+    width: 100%;
+}
+.navbar{
+    background-color: white;
+}
+.link {
+    font-size: 1.5rem;
+}
+.link-esqueci {
+    text-decoration: none;
+    color: #6640EE;;
+}
+
+.form-control{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    width: 5rem;
+    height: 4rem;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.btn-entrar {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    background-color: #9869F4;
+}
+.btn{
+    background: none;
+}
