@@ -1,3 +1,3 @@
 function validadeUser(user){
-    return user;
+    return /\S+\.\S+/.test(user);
   }
