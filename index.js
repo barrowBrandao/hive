@@ -33,17 +33,8 @@ function ValidateFields() {
   }
   function userErro(){
     const user = form.usuario().value;
-    if (!user) {
-        form.emailObrigatorio().style.display = "block";
-    } else {
-        form.emailObrigatorio().style.display = "none";
-    }
-      
-    if (validadeUser(user)) {
-        form.emailInvalido().style.display = "none";
-    } else {
-        form.emailInvalido().style.display = "block";
-    }
+    form.emailObrigatorio().style.display = user ? "none" : "block";
+    form.emailInvalido().style.display = validadeUser(user) ? "none" : "block";
   }
 
   function passwordError () {
