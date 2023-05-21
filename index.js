@@ -39,7 +39,7 @@ function ValidateFields() {
         form.emailObrigatorio().style.display = "none";
     }
       
-    if (validateUser(user)) {
+    if (validadeUser(user)) {
         form.emailInvalido().style.display = "none";
     } else {
         form.emailInvalido().style.display = "block";
