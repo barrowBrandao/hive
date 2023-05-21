@@ -47,34 +47,36 @@
                           <i class="fa-solid fa-circle-check"></i>
                           Sucesso!
                       </strong> 
-                      Sua mensagem foi enviada.
+                      Login efetuado.
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                   <form>
                       <div class="mb-3">
                           <label for="name" class="form-label">Usuário</label>
-                          <input type="text" class="form-control" id="nome" value="" placeholder="Informe o usuário">
+                          <input type="text" onchange="ValidateFields()" class="form-control" id="usuario" value="" placeholder="Informe o usuário">
+                          <div class="erro" id="user-erro">Usuário é obrigatório</div>
+                          <div class="erro" id="user-error">Usuário inválido</div>
                       </div>
                       <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" value="" placeholder="Infome a senha">
+                        <input type="password" id="senha" onchange="ValidateFields()" class="form-control" value="" placeholder="Infome a senha">
+                        <div class="erro" id="senha-erro">Senha é obrigatória</div>
+                        <div class="erro">Senha inválida</div>
                       </div>
                       <div class="row">
                         <div class="col-4">
                             <div class="form-check">
                               <input class="form-check-input" type="checkbox" id="gridCheck">
-                              <label class="form-check-label" for="gridCheck">
-                                Relembrar
-                              </label>
+                              <label class="form-check-label" for="gridCheck">Relembrar</label>
                             </div>
                         </div>
                         <div class="col">
-                            <a href="login.html" class="link-esqueci d-flex justify-content-end">Esqueci minha Senha</a>
+                            <a onclick="esqueci()"id="esqueci-senha" class="link-esqueci d-flex justify-content-end">Esqueci minha Senha</a>
                         </div>
                       </div>
           
                         <div class="p-md-2 text-center">
-                          <a class="btn px-md-4" style="background-color: #9869F4; color: white;">Entrar</a>
+                          <button type="button" class="btn px-md-4" id="btn-login" onclick="login()" disabled="true" style="background-color: #9869F4; color: white;">Entrar</button>
                         </div>
     
                     </form>
@@ -82,6 +84,25 @@
           </div>
       </div>
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  </body>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  
+  <script src="index.js"></script>
+  <script src="validations.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAmctigpyKWXz7x7Zo14Wt8wYJDKk3xtZ4",
+    authDomain: "hive-8386b.firebaseapp.com",
+    projectId: "hive-8386b",
+    storageBucket: "hive-8386b.appspot.com",
+    messagingSenderId: "135864909393",
+    appId: "1:135864909393:web:012482a84feb6b5c800270"
+  };
+  firebase.initializeApp(firebaseConfig);
+  </script>
+
+</body>
+
 </html>
